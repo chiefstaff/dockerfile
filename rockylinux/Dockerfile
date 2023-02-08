@@ -1,5 +1,5 @@
 FROM scratch
-ADD https://mirrors.aliyun.com/rockylinux/8/images/x86_64/Rocky-8-Container-Minimal-8.7-20221112.0.x86_64.tar.xz /
+ADD Rocky-8-Container-Minimal-8.7-20221112.0.x86_64.tar.xz /
 
 LABEL org.rockylinux.name="RockyLinux Base Image" \
       org.rockylinux.build-date="20230207" \
