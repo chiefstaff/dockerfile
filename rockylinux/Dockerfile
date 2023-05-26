@@ -1,9 +1,10 @@
 FROM scratch
 ADD Rocky-8-Container-Base-8.7-20221113.0.x86_64.tar.xz /
 
-LABEL org.rockylinux.name="RockyLinux Base Image" \
-      org.rockylinux.build-date="20230207" \
-      org.rockylinux.build-author="zhengwei"
+LABEL com.chnstack.name="RockyLinux Base Image" \
+      com.chnstack.build-date="20230207" \
+      com.chnstack.build-author="zhengwei" \
+      com.chnstack.osversion="8.7"
 
 RUN sed -e 's|^mirrorlist=|#mirrorlist=|g' -e 's|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.aliyun.com/rockylinux|g' /etc/yum.repos.d/Rocky-*.repo; \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime;
