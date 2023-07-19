@@ -9,6 +9,9 @@ LABEL com.chnstack.name="RockyLinux Base Image" \
 ADD Rocky-8-Container-Base.latest.x86_64.tar.xz /
 
 RUN sed -e 's|^mirrorlist=|#mirrorlist=|g' -e 's|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.aliyun.com/rockylinux|g' /etc/yum.repos.d/Rocky-*.repo; \
-    ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime;
+    ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime; \
+    dnf makecache; \
+    dnf -y update; \
+    dnf clean all;
 
 CMD ["/bin/bash"]
