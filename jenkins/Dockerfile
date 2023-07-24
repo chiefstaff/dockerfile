@@ -1,7 +1,7 @@
-FROM jenkins/jenkins:2.375.3-slim
+FROM jenkins/jenkins:2.401.2-slim
 
-LABEL jenkins.image.build-time="20230217" \
-      jenkins.image.version="2.375.3" \
+LABEL jenkins.image.build-time="20230724" \
+      jenkins.image.version="2.401.2" \
 	  jenkins.image.author="zhengwei"
 
 USER root
