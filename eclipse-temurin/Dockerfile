@@ -1,6 +1,6 @@
-FROM docker.io/bitnami/minideb:bookworm
-LABEL eclipse-temurin.build.time="20230802" \
-      eclipse-temurin.build.version="minideb-jdk8u382-b05"
+FROM docker.io/library/debian:buster-slim
+LABEL eclipse-temurin.build.time="20230804" \
+      eclipse-temurin.build.version="jdk8u382-b05"
 
 ENV JAVA_HOME /opt/java/openjdk
 ENV PATH $JAVA_HOME/bin:$PATH
